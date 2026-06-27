@@ -51,6 +51,6 @@ df.columns = [col.year for col in df.columns]
 df = df[sorted(df.columns)]
 
 outpath = f"data/statements_{ticker}.csv"
-df.to_csv(outpath)
+df.to_csv(outpath, index_label="LineItem")
 print(f"done — {len(df)} items written to {outpath}")
 print(df.to_string())
